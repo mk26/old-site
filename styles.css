@@ -1,0 +1,115 @@
+/* Fonts */
+
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+
+/* HTML elements */
+
+p {
+    font-family: Inconsolata;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+    text-align: justify;
+}
+
+hr {
+	border: none;
+	height: 1px;
+	background: -webkit-linear-gradient(left, #ffffff 0%, #39efca 20%, #13b3e8 50%, #39efca 80%, #ffffff 100%);
+}
+/* Custom Classes */
+
+.mknav {
+    background-color: rgba(253, 253, 253, 0.97);
+    padding: 10px 10px 25px 40px;
+    border: 0px solid black;
+    box-shadow: 0px 2px 8px rgba(94, 94, 94, 0.4);
+    color: #232323;
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+}
+.header {
+	font-family: Nitti Grotesk, sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: 1px;
+    float: left;
+    margin-right: 30px;
+    position: relative;
+}
+.navlinks {
+	position: relative;
+	top:15px;
+	right: 30px;
+	float: right;
+	font-family: Nitti Grotesk;
+	font-size: 20px;	
+}
+.navlinks > a {
+	color: black;
+	text-decoration: none;
+	padding: 7px;
+	border-radius: 5px;
+}
+.navlinks > a:hover {
+	color: white;
+	background-color: #181818;
+	border-radius: 5px;
+}
+.navlinks > a:active {
+	color: white;
+	background-color: #5d5d5d;
+	border-radius: 5px;
+}
+
+.maincontainer {
+    height: 100%;
+}
+.mkcontainer {
+    padding: 20px;
+    top: 60px;
+    position: relative;
+}
+a.title {
+	text-decoration: none;
+    font-family: Nitti Grotesk;
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+/* Responsiveness */
+
+@media(max-width: 595px) {
+    .mknav {
+        height: 105px;
+    }
+    .navlinks {
+	    float: left;
+	    top:0px;
+	    margin-left: 27px;
+    }
+    .navlinks > a {
+		padding: 5px;
+    }
+    .mkcontainer {
+	    top:100px;
+	    padding: 25px;
+    }
+    
+}
+
+/* Colors */
+.blue {
+    color: #0f58d6;
+}
+
+.teal {
+    color: #0bbbda;
+}
