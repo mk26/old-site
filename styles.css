@@ -1,6 +1,11 @@
 /* Fonts */
+@font-face {
+    font-family: "Nitti";
+    src: url(fonts/nittigrotesk-normal.otf) format('opentype');
+}
 
 @import url(http://fonts.googleapis.com/css?family=Inconsolata);
+
 
 /* HTML elements */
 
@@ -34,7 +39,7 @@ hr {
     z-index: 999;
 }
 .header {
-	font-family: Nitti Grotesk, sans-serif;
+	font-family: Nitti, sans-serif;
     font-weight: 400;
     font-size: 40px;
     letter-spacing: 1px;
@@ -47,7 +52,7 @@ hr {
 	top:15px;
 	right: 30px;
 	float: right;
-	font-family: Nitti Grotesk;
+	font-family: Nitti;
 	font-size: 20px;	
 }
 .navlinks > a {
