@@ -1,11 +1,15 @@
 /* Fonts */
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+
 @font-face {
-    font-family: "Nitti";
+    font-family: "Nitti Grotesk";
     src: url(fonts/nittigrotesk-normal.otf) format('opentype');
 }
 
-@import url(http://fonts.googleapis.com/css?family=Inconsolata);
-
+@font-face {
+    font-family: "Nitti Grotesk Bold";
+    src: url(fonts/nittigrotesk-bold.otf) format('opentype');
+}
 
 /* HTML elements */
 
@@ -39,8 +43,7 @@ hr {
     z-index: 999;
 }
 .header {
-	font-family: Nitti, sans-serif;
-    font-weight: 400;
+	font-family: Nitti Grotesk, sans-serif;
     font-size: 40px;
     letter-spacing: 1px;
     float: left;
@@ -52,7 +55,7 @@ hr {
 	top:15px;
 	right: 30px;
 	float: right;
-	font-family: Nitti;
+	font-family: Nitti Grotesk, sans-serif;
 	font-size: 20px;	
 }
 .navlinks > a {
@@ -82,23 +85,27 @@ hr {
 }
 a.title {
 	text-decoration: none;
-    font-family: Nitti Grotesk;
+    font-family: Nitti Grotesk Bold, sans-serif;
     margin-top: 20px;
     font-size: 35px;
-    font-weight: 600;
     letter-spacing: 0px;
 }
 
 /* Responsiveness */
 
-@media(max-width: 595px) {
+@media(max-width: 767px) {
+	.header {
+		padding-right: 250px;
+	}
     .mknav {
         height: 105px;
+		box-shadow: 0px 2px 16px rgba(94, 94, 94, 0.5);        
     }
     .navlinks {
 	    float: left;
 	    top:0px;
 	    margin-left: 27px;
+	    font-size: 18px;
     }
     .navlinks > a {
 		padding: 5px;
