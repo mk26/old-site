@@ -13,7 +13,7 @@
 
 @font-face {
     font-family: "Apercu Pro";
-    src: url(fonts/apercu_mono_pro.ttf) format('truetype');
+    src: url(fonts/apercu_mono_pro.ttf);
 }
 
 /* HTML elements */
@@ -88,7 +88,9 @@ hr {
 	background-color: #353535;
 	-webkit-transition: all 0.2s ease-in;
 }
-
+.maincontainer {
+	height: 100%;
+}
 /* Custom classes */
 .mkcontainer {
     padding: 64px;
@@ -118,7 +120,7 @@ a.title {
 @media(max-width: 600px) {
     .header {
 	    padding-top: 2px;
-	    -webkit-animation: rubberBand 0.4s;
+	    -webkit-animation: rubberBand 0.6s;
     }
     .logo {
 		font-size: 18px;
