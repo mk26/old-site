@@ -11,117 +11,134 @@
     src: url(fonts/nittigrotesk-bold.otf) format('opentype');
 }
 
-/* HTML elements */
-
-p {
-    font-family: Inconsolata;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 1.5em;
-    letter-spacing: 0px;
-    text-align: justify;
+@font-face {
+    font-family: "Apercu Pro";
+    src: url(fonts/apercu_mono_pro.ttf) format('truetype');
 }
 
+/* HTML elements */
+body {
+	background-color: #fdfdfd;
+}
+::selection {
+    background-color: #384dd8;
+    color: #8a94d3;
+}
 hr {
 	border: none;
 	height: 1px;
-	background: -webkit-linear-gradient(left, #ffffff 0%, #39efca 20%, #13b3e8 50%, #39efca 80%, #ffffff 100%);
+	background: -webkit-linear-gradient(left, #ffffff 0%, #d9d9d9 5%, #bcbcbc 50%, #d8d8d8 95%, #ffffff 100%);
 }
-/* Custom Classes */
 
-.mknav {
-    background-color: rgba(253, 253, 253, 0.97);
-    padding: 10px 10px 25px 40px;
-    border: 0px solid black;
-    box-shadow: 0px 2px 8px rgba(94, 94, 94, 0.4);
-    color: #232323;
+/* Header */
+.header {
+	background-color: rgba(255, 255, 110, 0.95);
     position: fixed;
     width: 100%;
-    height: 75px;
-    top: 0px;
-    left: 0px;
-    z-index: 999;
+    height: auto;
+    padding: 2px 0px 8px 0px;
+    z-index: 1000;
+   	text-align: center;
+   	-webkit-animation: fadeInDown 0.5s;
+   	-webkit-transition: all 0.3s ease-out;
+   	box-shadow: 0px 0px 15px 4px rgba(200, 200, 200, 0.3);
+   	border-radius: 1px;
 }
-.header {
+.logo {
 	font-family: Nitti Grotesk, sans-serif;
-    font-size: 40px;
-    letter-spacing: 1px;
-    float: left;
-    margin-right: 30px;
-    position: relative;
+    font-size: 20px;
+    letter-spacing: 2px;
+	text-align: center;
+	-webkit-animation: slideInDown 1s;
 }
 .navlinks {
-	position: relative;
-	top:15px;
-	right: 30px;
-	float: right;
-	font-family: Nitti Grotesk, sans-serif;
-	font-size: 20px;	
+	display: inline-block;
+	margin-top: 5px;
+	font-family: Apercu Pro, sans-serif;
+	font-size: 16px;
+	-webkit-animation: slideInDown 1s;
 }
 .navlinks > a {
+	display: inline-block;
+	min-width: 105px;
+	padding: 4px;
+	margin-right: -10px;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	border-left: 2px solid black;
 	color: black;
 	text-decoration: none;
-	padding: 7px;
-	border-radius: 5px;
+	-webkit-transition: all 0.2s ease-out;
+}
+.navlinks > a.left {
+	border-radius: 3px 0px 0px 3px;
+}
+.navlinks > a.right { 
+	border-radius: 0px 3px 3px 0px;
+	border-right: 2px solid black;
+	margin-right: 10px;
 }
 .navlinks > a:hover {
-	color: white;
-	background-color: #181818;
-	border-radius: 5px;
+	color: #ffffff;
+	background-color: black;
+	-webkit-transition: all 0.2s ease;
 }
 .navlinks > a:active {
-	color: white;
-	background-color: #5d5d5d;
-	border-radius: 5px;
+	color: #9b9b9b;
+	background-color: #353535;
+	-webkit-transition: all 0.2s ease-in;
 }
 
-.maincontainer {
-    height: 100%;
-}
+/* Custom classes */
 .mkcontainer {
-    padding: 20px;
-    top: 60px;
+    padding: 64px;
+    top: 20px;
     position: relative;
+    -webkit-animation: fadeIn 0.2s;
+   	-webkit-transition: all 0.2s ease-out;
 }
+
 a.title {
 	text-decoration: none;
     font-family: Nitti Grotesk Bold, sans-serif;
     margin-top: 20px;
-    font-size: 35px;
+    font-size: 32px;
     letter-spacing: 0px;
+    color: #0682e0;
+}
+.mktext {
+    font-family: Inconsolata;
+    font-size: 20px;
+    line-height: 1.5em;
+    text-align: justify;
+	-webkit-transition: all 0.2s ease-in;
 }
 
-/* Responsiveness */
-
-@media(max-width: 767px) {
-	.header {
-		padding-right: 250px;
-	}
-    .mknav {
-        height: 105px;
-		box-shadow: 0px 2px 16px rgba(94, 94, 94, 0.5);        
+/* Mobile responsiveness */
+@media(max-width: 600px) {
+    .header {
+	    padding-top: 2px;
+	    -webkit-animation: rubberBand 0.4s;
     }
+    .logo {
+		font-size: 18px;
+		-webkit-animation: slideInDown 1s;
+	}
     .navlinks {
-	    float: left;
-	    top:0px;
-	    margin-left: 27px;
-	    font-size: 18px;
+		margin-top: 2px;
+		-webkit-animation: slideInDown 1s;
     }
     .navlinks > a {
-		padding: 5px;
+	   font-size: 14px;
+	   min-width: 40px;
     }
     .mkcontainer {
-	    top:100px;
-	    padding: 25px;
+	    top: 35px;
+	    padding: 40px;
     }
-    
-}
-
-/* Colors */
-.blue {
-    color: #0f58d6;
-}
-
-.teal {
-    color: #0bbbda;
+    a.title {
+	    font-size: 28px;
+    }
+    .mktext {
+    }
 }
