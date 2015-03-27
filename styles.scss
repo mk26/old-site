@@ -1,17 +1,25 @@
-/* Fonts */
+/* Variables */
+
 @import url(http://fonts.googleapis.com/css?family=Inconsolata);
-$bodyfont : Inconsolata;
-$contentpad : 30px;
 
-@mixin animation($name, $time) {
-	-webkit-animation: $name $time;
-	animation: $name $time;
+$bodyFont: Inconsolata;
+$contentPad: 32px;
+
+/* Mixins */
+
+@mixin animation($name,
+$time) {
+    -webkit-animation: $name $time;
+    animation: $name $time;
 }
 
-@mixin transition($time, $ease) {
-	-webkit-transition: all $time $ease;
-	transition: all $time $ease;
+@mixin transition($time,
+$ease) {
+    -webkit-transition: all $time $ease;
+    transition: all $time $ease;
 }
+
+/* Fonts */
 
 @font-face {
     font-family: "Nitti Grotesk";
@@ -29,151 +37,168 @@ $contentpad : 30px;
 }
 
 /* HTML elements */
+
 body {
-	background-color: #fdfdfd;
-	overflow-x: hidden;
+    background-color: #fdfdfd;
+    overflow-x: hidden;
 }
+
 ::selection {
     background-color: #384dd8;
     color: #8a94d3;
 }
+
 hr {
-	border: none;
-	height: 1px;
-	background: -webkit-linear-gradient(left, #ffffff 0%, #d9d9d9 5%, #bcbcbc 50%, #d8d8d8 95%, #ffffff 100%);
+    border: none;
+    height: 1px;
+    background: -webkit-linear-gradient(left, #ffffff 0%, #d9d9d9 5%, #bcbcbc 50%, #d8d8d8 95%, #ffffff 100%);
 }
 
 /* Header */
+
 .header {
     position: fixed;
     width: 100%;
     height: auto;
     padding: 1px 0px 8px 0px;
     z-index: 1000;
-   	text-align: center;
-   	box-shadow: none;
-   	border-radius: 1px;
-   	@include animation(fadeInDown, 0.5s);
-   	@include transition(0.3s, ease-out);
+    text-align: center;
+    box-shadow: none;
+    border-radius: 1px;
+    @include animation(fadeInDown, 0.5s);
+    @include transition(0.3s, ease-out);
 }
+
 .logo {
-	font-family: Nitti Grotesk, sans-serif;
+    font-family: Nitti Grotesk, sans-serif;
     font-size: 20px;
     letter-spacing: 2px;
-	text-align: center;
+    text-align: center;
 }
+
 .navlinks {
-	display: inline-block;
-	margin-top: 2px;
-	font-family: Apercu, sans-serif;
-	font-size: 16px;
-	@include animation(slideInDown, 1s);
+    display: inline-block;
+    margin-top: 2px;
+    font-family: Apercu, sans-serif;
+    font-size: 16px;
+    @include animation(slideInDown, 1s);
 }
+
 .navlinks > a {
-	display: inline-block;
-	min-width: 105px;
-	padding: 4px;
-	margin-right: -10px;
-	border-top: 2px solid black;
-	border-bottom: 2px solid black;
-	border-left: 2px solid black;
-	color: black;
-	text-decoration: none;
-	cursor: default;
-	@include transition(0.2s, ease-out);
+    display: inline-block;
+    min-width: 105px;
+    padding: 4px;
+    margin-right: -10px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    color: black;
+    text-decoration: none;
+    cursor: default;
+    @include transition(0.2s, ease-out);
 }
+
 .navlinks > a.left {
-	border-radius: 4px 0px 0px 4px;
+    border-radius: 4px 0px 0px 4px;
 }
-.navlinks > a.right { 
-	border-radius: 0px 4px 4px 0px;
-	border-right: 2px solid black;
-	margin-right: 10px;
+
+.navlinks > a.right {
+    border-radius: 0px 4px 4px 0px;
+    border-right: 2px solid black;
+    margin-right: 10px;
 }
+
 .navlinks > a:hover {
-	color: #ffffff;
-	background-color: black;
-	@include transition(0.2s, ease);
+    color: #ffffff;
+    background-color: black;
+    @include transition(0.2s, ease);
 }
+
 .navlinks > a:active {
-	color: #9b9b9b;
-	background-color: #353535;
-	@include transition(0.2s, ease-in);
+    color: #9b9b9b;
+    background-color: #353535;
+    @include transition(0.2s, ease-in);
 }
 
 /* Containers */
+
 .container-fluid {
-	padding: 0px;
+    padding: 0px;
 }
+
 .row {
-  	margin-left: 0;
-  	margin-right: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
+
 .mkcontainer {
-	top: 75px;
-	position: relative;
-	@include animation(fadeIn, 0.2s);
-	@include transition(0.2s, ease-out);
+    top: 70px;
+    position: relative;
+    @include animation(fadeIn, 0.2s);
+    @include transition(0.2s, ease-out);
 }
+
 .proj-container {
-	padding: 10px $contentpad $contentpad $contentpad;
-	background-color: cadetblue;
+    padding: 10px $contentPad $contentPad $contentPad;
+    background-color: cadetblue;
 }
+
 .design-container {
-	padding: $contentpad;
-	background-color: steelblue;
+    padding: $contentPad;
+    background-color: steelblue;
 }
+
 .edu-container {
-	padding: $contentpad;
-	background-color: darkmagenta;
+    padding: $contentPad;
+    background-color: darkmagenta;
 }
 
 /* Custom classes */
+
 a.title {
-	text-decoration: none;
+    text-decoration: none;
     font-family: Nitti Grotesk Bold, sans-serif;
-    margin-top: 20px;
     font-size: 32px;
-    letter-spacing: 0px;
     color: white;
 }
+
 .mktext {
-    font-family: $bodyfont;
+    font-family: $bodyFont;
     color: white;
     font-size: 20px;
     line-height: 1.5em;
     text-align: justify;
-	@include transition(0.2s, ease-in);
+    @include transition(0.2s, ease-in);
 }
 
-/* Mobile responsiveness */
+/* Responsive classes for mobile */
+
 @media(max-width: 600px) {
     .header {
-	    @include animation(rubberBand, 0.6s);
+        @include animation(rubberBand, 0.6s);
     }
     .logo {
-		font-size: 18px;
-		@include animation(slideInDown, 1s);
-	}
+        font-size: 18px;
+        @include animation(slideInDown, 1s);
+    }
     .navlinks {
-	   	margin-top: 2px;
-	   	@include animation(slideInDown, 1s);
+        margin-top: 2px;
+        @include animation(slideInDown, 1s);
     }
     .navlinks > a {
-	   border-width: 1px;
-	   padding: 4px 8px 4px 8px;
-	   font-size: 14px;
-	   min-width: 50px;
+        border-width: 1px;
+        padding: 4px 8px 4px 8px;
+        font-size: 14px;
+        min-width: 50px;
     }
     .navlinks > a.right {
-	   border-width: 1px;
+        border-width: 1px;
     }
-    .mkcontainer {
-    }
+    .mkcontainer {}
     a.title {
-	    font-size: 28px;
+        font-size: 28px;
     }
     .mktext {
-	    font-size: 19px;
+        font-size: 19px;
     }
 }

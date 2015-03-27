@@ -1,4 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Inconsolata);
+/* Variables */
+/* Mixins */
 /* Fonts */
 @font-face {
   font-family: "Nitti Grotesk";
@@ -98,7 +100,7 @@ hr {
   margin-right: 0; }
 
 .mkcontainer {
-  top: 75px;
+  top: 70px;
   position: relative;
   -webkit-animation: fadeIn 0.2s;
   animation: fadeIn 0.2s;
@@ -106,24 +108,22 @@ hr {
   transition: all 0.2s ease-out; }
 
 .proj-container {
-  padding: 10px 30px 30px 30px;
+  padding: 10px 32px 32px 32px;
   background-color: cadetblue; }
 
 .design-container {
-  padding: 30px;
+  padding: 32px;
   background-color: steelblue; }
 
 .edu-container {
-  padding: 30px;
+  padding: 32px;
   background-color: darkmagenta; }
 
 /* Custom classes */
 a.title {
   text-decoration: none;
   font-family: Nitti Grotesk Bold, sans-serif;
-  margin-top: 20px;
   font-size: 32px;
-  letter-spacing: 0px;
   color: white; }
 
 .mktext {
@@ -135,7 +135,7 @@ a.title {
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in; }
 
-/* Mobile responsiveness */
+/* Responsive classes for mobile */
 @media (max-width: 600px) {
   .header {
     -webkit-animation: rubberBand 0.6s;
