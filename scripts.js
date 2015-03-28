@@ -1,6 +1,6 @@
 function smoothScroll(loc) {
     $('html,body').animate({
-        scrollTop: $('[name=' + loc.hash.slice(1) + ']').offset().top - $('.mknav').height() - 75
+        scrollTop: $('[name=' + loc.hash.slice(1) + ']').offset().top - $('.mknav').height() - 50
     }, 500);
 }
 
@@ -18,12 +18,23 @@ $(window).load(function () {
 
 //Navbar metamorphosis
 $(window).scroll(function () {
-    if ($(document).scrollTop() > $(".mkcontainer").offset().top) {
+	if ($(document).scrollTop() > 2) {
+		$('.mkcontainer').css({
+            'box-shadow': '2px 0px 30px 10px rgba(100, 100, 100, 0.4)'
+        });
+	}
+	else {
+		$('.mkcontainer').css({
+			'box-shadow': 'none'
+		});
+	}
+    if ($(document).scrollTop() > $(".mkcontainer").offset().top - 25) {
         $('.logo').removeClass("slideInDown");
         $('.header').css({
             'margin-top': '-20px',
+            'z-index': '1000',
             'background-color': 'rgba(255, 255, 120, 0.95)',
-            'box-shadow': '0px 0px 15px 4px rgba(100, 100, 100, 0.1)'
+            'box-shadow': '0px 0px 15px 10px rgba(100, 100, 100, 0.3)'
         });
         $('.logo').addClass("fadeOutUp");
 
@@ -31,6 +42,7 @@ $(window).scroll(function () {
         $('.logo').removeClass("fadeOutUp");
         $('.header').css({
             'margin-top': '0px',
+			'z-index': '0',
             'background-color': 'rgba(255, 255, 255, 0.95)',
             'box-shadow': 'none'
         });

@@ -61,7 +61,7 @@ hr {
     width: 100%;
     height: auto;
     padding: 1px 0px 8px 0px;
-    z-index: 1000;
+    z-index: 0;
     text-align: center;
     box-shadow: none;
     border-radius: 1px;
@@ -135,7 +135,7 @@ hr {
     top: 70px;
     position: relative;
     @include animation(fadeIn, 0.2s);
-    @include transition(0.2s, ease-out);
+    @include transition(0.2s, ease);
 }
 
 .proj-container {

@@ -34,7 +34,7 @@ hr {
   width: 100%;
   height: auto;
   padding: 1px 0px 8px 0px;
-  z-index: 1000;
+  z-index: 0;
   text-align: center;
   box-shadow: none;
   border-radius: 1px;
@@ -104,8 +104,8 @@ hr {
   position: relative;
   -webkit-animation: fadeIn 0.2s;
   animation: fadeIn 0.2s;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out; }
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
 
 .proj-container {
   padding: 10px 32px 32px 32px;
