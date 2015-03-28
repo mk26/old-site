@@ -103,9 +103,7 @@ hr {
   top: 70px;
   position: relative;
   -webkit-animation: fadeIn 0.2s;
-  animation: fadeIn 0.2s;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease; }
+  animation: fadeIn 0.2s; }
 
 .proj-container {
   padding: 10px 32px 32px 32px;

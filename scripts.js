@@ -4,6 +4,15 @@ function smoothScroll(loc) {
     }, 500);
 }
 
+var _ = {
+	get : function (name) {
+	if(name[0] == ".")
+		return document.getElementsByClassName(name.slice(1))[0];
+	else if(name[0] == "#")
+		return document.getElementById(name.slice(1));
+	}
+}
+
 $('a[href*=#]').click(function () {
     smoothScroll(this);
     //Replace URL with hash
@@ -11,16 +20,16 @@ $('a[href*=#]').click(function () {
     window.location.replace(loc + this.hash);
 });
 
-$(window).load(function () {
+window.onload = function () {
     if (window.location.hash)
         smoothScroll(window.location);
-});
+};
 
 //Navbar metamorphosis
-$(window).scroll(function () {
-	if ($(document).scrollTop() > 2) {
+window.onscroll = function () {
+	if (document.body.scrollTop > 5) {		
 		$('.mkcontainer').css({
-            'box-shadow': '2px 0px 30px 10px rgba(100, 100, 100, 0.4)'
+            'box-shadow': '2px 0px 20px 10px rgba(100, 100, 100, 0.4)'
         });
 	}
 	else {
@@ -28,7 +37,7 @@ $(window).scroll(function () {
 			'box-shadow': 'none'
 		});
 	}
-    if ($(document).scrollTop() > $(".mkcontainer").offset().top - 25) {
+    if (document.body.scrollTop > document.getElementsByClassName('mkcontainer')[0].offsetTop - 25) {
         $('.logo').removeClass("slideInDown");
         $('.header').css({
             'margin-top': '-20px',
@@ -47,4 +56,4 @@ $(window).scroll(function () {
             'box-shadow': 'none'
         });
     }
-});
+};

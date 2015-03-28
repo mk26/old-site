@@ -135,7 +135,7 @@ hr {
     top: 70px;
     position: relative;
     @include animation(fadeIn, 0.2s);
-    @include transition(0.2s, ease);
+    //@include transition(0.2s, ease);
 }
 
 .proj-container {
