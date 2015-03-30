@@ -1,6 +1,6 @@
 function smoothScroll(loc) {
     $('html,body').animate({
-        scrollTop: $('[name=' + loc.hash.slice(1) + ']').offset().top - $('.mknav').height() - 80
+        scrollTop: $('[name=' + loc.hash.slice(1) + ']').offset().top - $('.mknav').height() - 220
     }, 500);
 }
 
@@ -63,3 +63,9 @@ window.onscroll = function () {
         });
     }
 };
+
+$('.mknav').dblclick(function(){
+	$('html,body').animate({
+        scrollTop: 0
+    }, 300);
+});

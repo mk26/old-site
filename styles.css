@@ -40,7 +40,8 @@ hr {
   -webkit-animation: fadeInDown 0.5s;
   animation: fadeInDown 0.5s;
   -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out; }
+  transition: all 0.3s ease-out;
+  -webkit-user-select: none; }
 
 .logo {
   font-family: Nitti Grotesk, sans-serif;
@@ -99,8 +100,9 @@ hr {
   margin-right: 0; }
 
 .mkcontainer {
-  top: 70px;
+  top: 75px;
   position: relative;
+  border-radius: 1px;
   -webkit-animation: fadeIn 0.2s;
   animation: fadeIn 0.2s; }
 
@@ -112,7 +114,7 @@ hr {
   text-align: center;
   font-size: 100px;
   text-shadow: 0px 0px 50px #858585;
-  height: 500px;
+  height: 95vh;
   background-size: cover;
   background-attachment: fixed; }
 
@@ -131,7 +133,7 @@ hr {
   background-color: steelblue; }
 
 .pre-abt {
-  background-image: url(images/bigmars.jpg); }
+  background-image: url(images/meteor.jpg); }
 
 .abt-container {
   padding: 32px;
@@ -184,8 +186,8 @@ a.title {
     height: 300px;
     font-size: 60px;
     text-shadow: 0px 0px 40px #161616;
-    -webkit-animation: rubberBand 0.2s;
-    animation: rubberBand 0.2s; }
+    -webkit-animation: fadeIn 0.2s;
+    animation: fadeIn 0.2s; }
 
   .mktext {
     font-size: 19px; }
