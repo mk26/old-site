@@ -2,19 +2,17 @@
 
 @import url(http://fonts.googleapis.com/css?family=Inconsolata);
 
-$bodyFont: Inconsolata;
+$bodyFont: Karla;
 $contentPad: 32px;
 
 /* Mixins */
 
-@mixin animation($name,
-$time) {
+@mixin animation($name, $time) {
     -webkit-animation: $name $time;
     animation: $name $time;
 }
 
-@mixin transition($time,
-$ease) {
+@mixin transition($time, $ease) {
     -webkit-transition: all $time $ease;
     transition: all $time $ease;
 }
@@ -40,7 +38,7 @@ $ease) {
 
 body {
     background-color: #fdfdfd;
-    overflow-x: hidden;
+    //overflow-x: hidden;
 }
 
 ::selection {
@@ -125,7 +123,6 @@ hr {
 .container-fluid {
     padding: 0px;
 }
-
 .row {
     margin-left: 0;
     margin-right: 0;
@@ -137,18 +134,40 @@ hr {
     @include animation(fadeIn, 0.2s);
     //@include transition(0.2s, ease);
 }
-
-.proj-container {
-    padding: 10px $contentPad $contentPad $contentPad;
-    background-color: cadetblue;
+.contentcontainer {
+	position: relative;
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.4);
 }
-
+.pre {
+	text-align: center;
+	font-size: 100px;
+	text-shadow: 0px 0px 50px #858585;
+	height: 500px;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.pre-proj {
+	background-image:url(images/isolatedrain.jpg);	
+}
+.proj-container {
+	@extend .contentcontainer;
+    padding: 10px $contentPad $contentPad $contentPad;
+    background-color: #5b8d90;
+}
+.pre-design {
+	background-image:url(images/likemars.jpg);	
+}
 .design-container {
+	@extend .contentcontainer;
     padding: $contentPad;
     background-color: steelblue;
-}
 
-.edu-container {
+}
+.pre-abt {
+	background-image:url(images/bigmars.jpg);	
+}
+.abt-container {
+	@extend .contentcontainer;
     padding: $contentPad;
     background-color: darkmagenta;
 }
@@ -158,14 +177,16 @@ hr {
 a.title {
     text-decoration: none;
     font-family: Nitti Grotesk Bold, sans-serif;
-    font-size: 32px;
     color: white;
+    margin-top: 20%;
+    display: inline-block;
+    //@include transition(0.3s, ease);
 }
 
 .mktext {
     font-family: $bodyFont;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.5em;
     text-align: justify;
     @include transition(0.2s, ease-in);
@@ -195,8 +216,11 @@ a.title {
         border-width: 1px;
     }
     .mkcontainer {}
-    a.title {
-        font-size: 28px;
+    .pre {
+		height: 300px;
+		font-size: 60px;
+		text-shadow: 0px 0px 40px #161616;
+		@include animation(rubberBand, 0.2s);
     }
     .mktext {
         font-size: 19px;

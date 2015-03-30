@@ -16,8 +16,7 @@
 
 /* HTML elements */
 body {
-  background-color: #fdfdfd;
-  overflow-x: hidden; }
+  background-color: #fdfdfd; }
 
 ::selection {
   background-color: #384dd8;
@@ -105,15 +104,36 @@ hr {
   -webkit-animation: fadeIn 0.2s;
   animation: fadeIn 0.2s; }
 
+.contentcontainer, .proj-container, .design-container, .abt-container {
+  position: relative;
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.4); }
+
+.pre {
+  text-align: center;
+  font-size: 100px;
+  text-shadow: 0px 0px 50px #858585;
+  height: 500px;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.pre-proj {
+  background-image: url(images/isolatedrain.jpg); }
+
 .proj-container {
   padding: 10px 32px 32px 32px;
-  background-color: cadetblue; }
+  background-color: #5b8d90; }
+
+.pre-design {
+  background-image: url(images/likemars.jpg); }
 
 .design-container {
   padding: 32px;
   background-color: steelblue; }
 
-.edu-container {
+.pre-abt {
+  background-image: url(images/bigmars.jpg); }
+
+.abt-container {
   padding: 32px;
   background-color: darkmagenta; }
 
@@ -121,13 +141,14 @@ hr {
 a.title {
   text-decoration: none;
   font-family: Nitti Grotesk Bold, sans-serif;
-  font-size: 32px;
-  color: white; }
+  color: white;
+  margin-top: 20%;
+  display: inline-block; }
 
 .mktext {
-  font-family: Inconsolata;
+  font-family: Karla;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5em;
   text-align: justify;
   -webkit-transition: all 0.2s ease-in;
@@ -159,8 +180,12 @@ a.title {
     border-width: 1px; }
 
 
-  a.title {
-    font-size: 28px; }
+  .pre {
+    height: 300px;
+    font-size: 60px;
+    text-shadow: 0px 0px 40px #161616;
+    -webkit-animation: rubberBand 0.2s;
+    animation: rubberBand 0.2s; }
 
   .mktext {
     font-size: 19px; }

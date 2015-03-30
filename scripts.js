@@ -1,6 +1,6 @@
 function smoothScroll(loc) {
     $('html,body').animate({
-        scrollTop: $('[name=' + loc.hash.slice(1) + ']').offset().top - $('.mknav').height() - 50
+        scrollTop: $('[name=' + loc.hash.slice(1) + ']').offset().top - $('.mknav').height() - 80
     }, 500);
 }
 
@@ -27,9 +27,15 @@ window.onload = function () {
 
 //Navbar metamorphosis
 window.onscroll = function () {
-	if (document.body.scrollTop > 5) {		
+	var parallax = document.querySelectorAll(".pre");
+	[].slice.call(parallax).forEach(function(el,i) {
+		var bgPosition = "50% " + (window.pageYOffset/8 * 0.2) + "px";
+		el.style.backgroundPosition = bgPosition;
+	});
+
+	if (document.body.scrollTop > 0) {		
 		$('.mkcontainer').css({
-            'box-shadow': '2px 0px 20px 10px rgba(100, 100, 100, 0.4)'
+            'box-shadow': '2px 0px 30px 10px rgba(100, 100, 100, 0.5)'
         });
 	}
 	else {
