@@ -27,11 +27,15 @@ window.onload = function () {
 
 //Navbar metamorphosis
 window.onscroll = function () {
-	var parallax = document.querySelectorAll(".pre");
-	[].slice.call(parallax).forEach(function(el,i) {
-		var bgPosition = "50% " + (window.pageYOffset/8 * 0.2) + "px";
-		el.style.backgroundPosition = bgPosition;
-	});
+	var mq = window.matchMedia('@media(max-width: 600px)');
+	if(mq.matches) {} 
+	else {
+		var parallax = document.querySelectorAll(".pre");
+		[].slice.call(parallax).forEach(function(el,i) {
+			var bgPosition = "50% " + (window.pageYOffset/8 * 0.2) + "px";
+			el.style.backgroundPosition = bgPosition;
+		});	
+	}
 
 	if (document.body.scrollTop > 0) {		
 		$('.mkcontainer').css({

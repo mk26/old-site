@@ -222,7 +222,8 @@ a.title {
 		height: 300px;
 		font-size: 60px;
 		text-shadow: 0px 0px 40px #161616;
-		@include animation(fadeIn, 0.2s);
+		background-attachment: scroll;
+		@include animation(rubberBand, 0.2s);
     }
     .mktext {
         font-size: 19px;

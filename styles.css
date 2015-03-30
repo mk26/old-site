@@ -186,8 +186,9 @@ a.title {
     height: 300px;
     font-size: 60px;
     text-shadow: 0px 0px 40px #161616;
-    -webkit-animation: fadeIn 0.2s;
-    animation: fadeIn 0.2s; }
+    background-attachment: scroll;
+    -webkit-animation: rubberBand 0.2s;
+    animation: rubberBand 0.2s; }
 
   .mktext {
     font-size: 19px; }
