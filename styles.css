@@ -145,8 +145,7 @@ a.title {
   text-decoration: none;
   font-family: Nitti Grotesk Bold, sans-serif;
   color: white;
-  margin-top: 20%;
-  display: inline-block; }
+  line-height: 95vh; }
 
 .mktext {
   font-family: Karla;
@@ -184,6 +183,9 @@ a.title {
 
   .mkcontainer {
     top: 65px; }
+
+  a.title {
+    line-height: 50vh; }
 
   .pre {
     height: 50vh;
