@@ -113,21 +113,29 @@ hr {
 
 .pre {
   text-align: center;
+  font-family: Nitti Grotesk Bold, sans-serif;
   font-size: 100px;
   text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
-  height: 95vh;
+  height: 50vh;
+  line-height: 50vh;
   background-size: cover;
   background-attachment: fixed; }
+
+.pre-hello {
+  height: 95vh;
+  line-height: 95vh;
+  font-family: Pacifico;
+  background-image: url(images/fog.jpg); }
 
 .pre-proj {
   background-image: url(images/isolatedrain.jpg); }
 
 .proj-container {
   padding: 10px 32px 32px 32px;
-  background-color: #5b8d90; }
+  background-color: rgba(90, 140, 143, 0.69); }
 
 .pre-design {
-  background-image: url(images/likemars.jpg); }
+  background-image: url(images/rain.jpg); }
 
 .design-container {
   padding: 32px;
@@ -141,11 +149,14 @@ hr {
   background-color: darkmagenta; }
 
 /* Custom classes */
-a.title {
+.title, a.title {
   text-decoration: none;
-  font-family: Nitti Grotesk Bold, sans-serif;
   color: white;
-  line-height: 95vh; }
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+a.title {
+  text-decoration: none; }
 
 .mktext {
   font-family: Karla;
@@ -184,11 +195,7 @@ a.title {
   .mkcontainer {
     top: 65px; }
 
-  a.title {
-    line-height: 50vh; }
-
   .pre {
-    height: 50vh;
     font-size: 60px;
     text-shadow: 0px 0px 40px #161616;
     background-attachment: scroll;

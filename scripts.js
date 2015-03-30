@@ -1,6 +1,6 @@
 function smoothScroll(loc) {
     $('html,body').animate({
-        scrollTop: $('[name=' + loc.hash.slice(1) + ']').offset().top - $('.mknav').height() - 220
+        scrollTop: $('[name=' + loc.hash.slice(1) + ']').offset().top - $('.mknav').height() - 145
     }, 500);
 }
 
@@ -16,17 +16,17 @@ var _ = {
 $('a[href*=#]').click(function () {
     smoothScroll(this);
     //Replace URL with hash
-    var loc = window.location.href.split("#")[0];
-    window.location.replace(loc + this.hash);
+    //var loc = window.location.href.split("#")[0];
+    //window.location.replace(loc + this.hash);
 });
 
 window.onload = function () {
-    if (window.location.hash)
-        smoothScroll(window.location);
+    if (window.location.hash) 
+    	smoothScroll(window.location);
 };
 
-//Navbar metamorphosis
 window.onscroll = function () {
+	//Disable parallax for Mobile devices
 	if($('.pre').css('font-size')=="100px") {		
 		var parallax = document.querySelectorAll(".pre");
 		[].slice.call(parallax).forEach(function(el,i) {
@@ -37,7 +37,8 @@ window.onscroll = function () {
 	else {
 		$('.pre').css({'background-position': '0% 0%'});
 	}
-
+	
+	//Initial shadow over main container
 	if (document.body.scrollTop > 0) {		
 		$('.mkcontainer').css({
             'box-shadow': '2px 0px 30px 10px rgba(100, 100, 100, 0.5)'
@@ -48,6 +49,8 @@ window.onscroll = function () {
 			'box-shadow': 'none'
 		});
 	}
+	
+	//Make navbar smaller
     if (document.body.scrollTop > document.getElementsByClassName('mkcontainer')[0].offsetTop - 25) {
         $('.logo').removeClass("slideInDown");
         $('.header').css({
@@ -69,8 +72,7 @@ window.onscroll = function () {
     }
 };
 
+//Double click navbar to go to top
 $('.mknav').dblclick(function(){
-	$('html,body').animate({
-        scrollTop: 0
-    }, 300);
+	$('html,body').animate({scrollTop: 0}, 300);
 });
