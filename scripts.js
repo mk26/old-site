@@ -40,7 +40,7 @@ window.onscroll = function () {
 	$('.pre-hello').css({'-webkit-filter': 'brightness('+level+'%)'});
 	
 	//Disable parallax for Mobile devices
-	if(typeof window.orientation !== 'undefined') {		
+	if(typeof window.orientation == 'undefined') {		
 		var parallax = document.querySelectorAll(".pre");
 		[].slice.call(parallax).forEach(function(el,i) {
 			var bgPosition = "50% " + (window.pageYOffset/8 * 0.2) + "px";
@@ -50,7 +50,8 @@ window.onscroll = function () {
 	else {
 		$('.pre').css({
 			'background-attachment': 'scroll',
-			'background-position': '0% 0%'});
+			'background-position': '0% 0%'
+		});
 	}
 	
 	//Initial shadow over main container
