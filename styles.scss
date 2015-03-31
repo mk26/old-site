@@ -152,6 +152,7 @@ hr {
 	background-attachment: fixed;
 }
 .pre-hello {
+	-webkit-filter: brightness(20%);
 	height: 95vh;
 	line-height: 95vh;
 	font-family: Pacifico;
@@ -163,7 +164,7 @@ hr {
 .proj-container {
 	@extend .contentcontainer;
     padding: 10px $contentPad $contentPad $contentPad;
-    background-color: rgba(90, 140, 143, 0.69);
+    background-color: cadetblue;
 }
 .pre-design {
 	background-image:url(images/rain.jpg);	
@@ -230,6 +231,10 @@ a.title {
     }
     .mkcontainer {
 	    top: 65px;
+    }
+    .pre-hello {
+	    height: 90vh;
+	    line-height: 90vh;
     }
     .pre {
 		font-size: 60px;

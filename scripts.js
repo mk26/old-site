@@ -26,6 +26,9 @@ window.onload = function () {
 };
 
 window.onscroll = function () {
+	var brightness = (window.pageYOffset/2 > 100) ? 100 : window.pageYOffset/2;
+	var level = brightness < 20 ? 20 : brightness;
+	$('.pre-hello').css({'-webkit-filter': 'brightness('+level+'%)'});
 	//Disable parallax for Mobile devices
 	if($('.pre').css('font-size')=="100px") {		
 		var parallax = document.querySelectorAll(".pre");
