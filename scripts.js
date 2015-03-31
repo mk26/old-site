@@ -25,15 +25,6 @@ window.onload = function () {
     	smoothScroll(window.location);
 };
 
-function isMobile(){
-    return (
-        //Detect iPhone
-        (navigator.platform.indexOf("iPhone") != -1) ||
-        //Detect iPod
-        (navigator.platform.indexOf("iPod") != -1)
-    );
-}
-
 window.onscroll = function () {
 	var brightness = (window.pageYOffset/2 > 100) ? 100 : window.pageYOffset/2;
 	var level = brightness < 20 ? 20 : brightness;
