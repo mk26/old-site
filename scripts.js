@@ -25,12 +25,22 @@ window.onload = function () {
     	smoothScroll(window.location);
 };
 
+function isMobile(){
+    return (
+        //Detect iPhone
+        (navigator.platform.indexOf("iPhone") != -1) ||
+        //Detect iPod
+        (navigator.platform.indexOf("iPod") != -1)
+    );
+}
+
 window.onscroll = function () {
 	var brightness = (window.pageYOffset/2 > 100) ? 100 : window.pageYOffset/2;
 	var level = brightness < 20 ? 20 : brightness;
 	$('.pre-hello').css({'-webkit-filter': 'brightness('+level+'%)'});
+	
 	//Disable parallax for Mobile devices
-	if($('.pre').css('font-size')=="100px") {		
+	if(typeof window.orientation !== 'undefined') {		
 		var parallax = document.querySelectorAll(".pre");
 		[].slice.call(parallax).forEach(function(el,i) {
 			var bgPosition = "50% " + (window.pageYOffset/8 * 0.2) + "px";
@@ -38,12 +48,15 @@ window.onscroll = function () {
 		});	
 	}
 	else {
-		$('.pre').css({'background-position': '0% 0%'});
+		$('.pre').css({
+			'background-attachment': 'scroll',
+			'background-position': '0% 0%'});
 	}
 	
 	//Initial shadow over main container
 	if (document.body.scrollTop > 0) {		
 		$('.mkcontainer').css({
+			
             'box-shadow': '2px 0px 30px 10px rgba(100, 100, 100, 0.5)'
         });
 	}
