@@ -1,6 +1,6 @@
 function smoothScroll(loc) {
     $('html,body').animate({
-        scrollTop: $('[name=' + loc.hash.slice(1) + ']').offset().top - $('.mknav').height() - 145
+        scrollTop: $('[name=' + loc.hash.slice(1) + ']').offset().top - $('.mknav').height() - 100
     }, 500);
 }
 

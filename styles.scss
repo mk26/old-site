@@ -155,9 +155,28 @@ hr {
 .pre-hello {
 	-webkit-filter: brightness(20%);
 	height: 95vh;
-	line-height: 95vh;
+	//line-height: 95vh;
 	font-family: Pacifico;
 	background-image:url(images/fog.jpg);	
+}
+.title2 {
+	cursor: default;
+	text-decoration: none;
+    color: rgba(240, 240, 240, 0.87);
+	-webkit-animation-iteration-count: infinite;	
+	margin-top: -150px;
+}
+.title2:hover {
+	color: rgba(240, 240, 240, 1);
+}
+.title2:active {
+	color: rgba(240, 240, 240, 0.2);
+}
+.downindicator {
+	font-size: 75px;
+	text-align: center;
+	text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
+    @include transition(0.3s, ease);
 }
 .pre-proj {
 	background-image:url(images/isolatedrain.jpg);	
