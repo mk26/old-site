@@ -18,6 +18,15 @@ $contentPad: 32px;
     transition: all $time $ease;
 }
 
+@mixin noselect() {
+	-webkit-user-select: none;
+    user-select: none;
+}
+
+@mixin accelerate() {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
 /* Fonts */
 
 @font-face {
@@ -39,7 +48,7 @@ $contentPad: 32px;
 
 body {
     background-color: #fdfdfd;
-    //overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 ::selection {
@@ -66,8 +75,8 @@ hr {
     border-radius: 1px;
     @include animation(fadeInDown, 0.5s);
     @include transition(0.3s, ease-out);
-    -webkit-user-select: none;
-	-webkit-transform: translate3d(0, 0, 0);
+	@include noselect();
+	@include accelerate();
 }
 
 .logo {
@@ -136,9 +145,10 @@ hr {
     position: relative;
     border-radius: 1px;
     @include animation(fadeIn, 0.2s);
-    //@include transition(0.2s, ease);
+    @include accelerate();
 }
 .contentcontainer {
+	z-index: 10;
 	position: relative;
 	border-radius: 1px;
     box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.4);
@@ -152,33 +162,39 @@ hr {
 	line-height: 50vh;
 	background-size: cover;
 	background-attachment: fixed;
-	-webkit-transform: translate3d(0, 0, 0);
+	@include accelerate();
+	@include noselect();
 }
 .pre-hello {
 	height: 100vh;
-	line-height: 100vh;
+	line-height: 90vh;
 	font-family: Pacifico;
 	background-image:url(images/fog.jpg);	
 	-webkit-filter: brightness(20%);
-	-webkit-transform: translate3d(0, 0, 0);
+	filter: brightness(20%);
+	@include accelerate();
+	@include noselect();
 }
+
 .title-pre {
-	cursor: default;
-	text-decoration: none;
-    color: rgba(240, 240, 240, 0.87);
-	-webkit-animation-iteration-count: infinite;	
-	margin-top: -175px;
-}
-.title-pre:hover {
-	color: rgba(240, 240, 240, 1);
-}
-.title-pre:active {
-	color: rgba(240, 240, 240, 0.2);
-}
-.downindicator {
 	font-size: 75px;
 	text-align: center;
 	text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
+	cursor: default;
+	margin-top: -175px;
+	z-index: 100px;
+	text-decoration: none;
+    color: rgba(240, 240, 240, 0.6);
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;	
+}
+.title-pre:hover {
+	text-shadow: 0px 0px 50px rgba(100, 100, 100, 0.6);
+	color: rgba(240, 240, 240, 1);
+}
+.title-pre:active {
+	text-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+	color: rgba(240, 240, 240, 0.2);
 }
 .pre-proj {
 	background-image:url(images/isolatedrain.jpg);	
@@ -209,13 +225,13 @@ hr {
 /* Custom classes */
 
 .title {
-    text-decoration: none;
     color: white;
     @include transition(0.3s, ease);
 }
 
 a.title {
 	@extend .title;
+	cursor: default;
 	text-decoration: none;
 }
 

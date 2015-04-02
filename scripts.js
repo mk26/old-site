@@ -19,7 +19,8 @@ window.onscroll = function () {
 	var brightness = (window.pageYOffset/2 > 100) ? 100 : window.pageYOffset/2;
 	var level = brightness < 20 ? 20 : brightness;
 	var hello = document.getElementsByClassName("pre-hello")[0];
-	hello.setAttribute("style", '-webkit-filter: brightness('+level+'%)')
+	hello.setAttribute("style", '-webkit-filter: brightness('+level+'%)');
+	hello.setAttribute("style", 'filter: brightness('+level+'%)');
 		
 	//Disable parallax for Mobile devices
 	if(typeof window.orientation == 'undefined') {		
@@ -36,11 +37,9 @@ window.onscroll = function () {
 		});
 	}
 	
-/*
 	//Initial shadow over main container
-	if (document.body.scrollTop > 0) {		
+	if (document.body.scrollTop > 0) {	
 		$('.mkcontainer').css({
-			
             'box-shadow': '2px 0px 30px 10px rgba(100, 100, 100, 0.5)'
         });
 	}
@@ -49,7 +48,7 @@ window.onscroll = function () {
 			'box-shadow': 'none'
 		});
 	}
-*/
+
 	
 	//Make navbar smaller
     if (document.body.scrollTop > document.getElementsByClassName('mkcontainer')[0].offsetTop - 25) {
