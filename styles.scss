@@ -67,6 +67,7 @@ hr {
     @include animation(fadeInDown, 0.5s);
     @include transition(0.3s, ease-out);
     -webkit-user-select: none;
+	-webkit-transform: translate3d(0, 0, 0);
 }
 
 .logo {
@@ -143,6 +144,7 @@ hr {
     box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.4);
 }
 .pre {
+	-webkit-transform: translate3d(0, 0, 0);
 	text-align: center;
 	font-family: Nitti Grotesk Bold, sans-serif;
 	font-size: 100px;
@@ -153,8 +155,10 @@ hr {
 	background-attachment: fixed;
 }
 .pre-hello {
+	-webkit-transform: translate3d(0, 0, 0);
 	-webkit-filter: brightness(20%);
-	height: 95vh;
+	height: 100vh;
+	padding-top: 50px;
 	font-family: Pacifico;
 	background-image:url(images/fog.jpg);	
 }

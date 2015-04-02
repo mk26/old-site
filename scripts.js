@@ -4,32 +4,23 @@ function smoothScroll(loc) {
     }, 500);
 }
 
-var _ = {
-	get : function (name) {
-	if(name[0] == ".")
-		return document.getElementsByClassName(name.slice(1))[0];
-	else if(name[0] == "#")
-		return document.getElementById(name.slice(1));
-	}
-}
-
 $('a[href*=#]').click(function () {
     smoothScroll(this);
-    //Replace URL with hash
-    //var loc = window.location.href.split("#")[0];
-    //window.location.replace(loc + this.hash);
 });
 
 window.onload = function () {
+	//Go to section if present in URL
     if (window.location.hash) 
     	smoothScroll(window.location);
 };
 
+//Scroll events
 window.onscroll = function () {
 	var brightness = (window.pageYOffset/2 > 100) ? 100 : window.pageYOffset/2;
 	var level = brightness < 20 ? 20 : brightness;
-	$('.pre-hello').css({'-webkit-filter': 'brightness('+level+'%)'});
-	
+	var hello = document.getElementsByClassName("pre-hello")[0];
+	hello.setAttribute("style", '-webkit-filter: brightness('+level+'%)')
+		
 	//Disable parallax for Mobile devices
 	if(typeof window.orientation == 'undefined') {		
 		var parallax = document.querySelectorAll(".pre");
@@ -45,6 +36,7 @@ window.onscroll = function () {
 		});
 	}
 	
+/*
 	//Initial shadow over main container
 	if (document.body.scrollTop > 0) {		
 		$('.mkcontainer').css({
@@ -57,6 +49,7 @@ window.onscroll = function () {
 			'box-shadow': 'none'
 		});
 	}
+*/
 	
 	//Make navbar smaller
     if (document.body.scrollTop > document.getElementsByClassName('mkcontainer')[0].offsetTop - 25) {
