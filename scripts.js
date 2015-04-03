@@ -54,6 +54,7 @@ window.onscroll = function () {
 	var dist = document.getElementsByClassName('mkcontainer')[0].offsetTop - 25
     if (document.body.scrollTop > dist || document.documentElement.scrollTop > dist) {
         $('.logo').removeClass("slideInDown");
+        $('#top-right-logo').removeClass("rotateOutUpRight");
         $('.header').css({
             'margin-top': '-20px',
             'z-index': '1000',
@@ -61,15 +62,17 @@ window.onscroll = function () {
             'box-shadow': '0px 0px 15px 10px rgba(100, 100, 100, 0.2)'
         });
         $('.logo').addClass("fadeOutUp");
-
+		$('#top-right-logo').addClass("rotateInDownRight");
     } else {
         $('.logo').removeClass("fadeOutUp");
+		$('#top-right-logo').removeClass("rotateInDownRight");
         $('.header').css({
             'margin-top': '0px',
 			'z-index': '0',
             'background-color': 'rgba(255, 255, 255, 0.95)',
             'box-shadow': 'none'
         });
+		$('#top-right-logo').addClass("rotateOutUpRight");
     }
 };
 

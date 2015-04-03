@@ -256,6 +256,8 @@ a.title {
 	border: 1px solid white;
 	padding: 3px 6px 3px 6px;
 	margin: -2px;
+	cursor: default;
+	@include noselect();
 }
 .tag-time {
 	@extend .mktag;
@@ -266,10 +268,23 @@ a.title {
 	@extend .mktag;
 	color: white;
 }
+.mk-img {
+	float: right;
+	margin-left: 10px;
+	margin-right: 5px;
+	display: block;
+}
+#top-right-logo {
+	@extend .mk-img;
+	margin-top: -33px;
+	margin-right: 8px;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+}
 
 /* Responsive classes for mobile */
 
-@media(max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .header {
         @include animation(rubberBand, 0.6s);
     }
@@ -305,5 +320,9 @@ a.title {
     }
     .mktext {
         font-size: 19px;
+    }
+    #top-right-logo {
+    	margin-top: -31px;
+		margin-right: 5px;
     }
 }

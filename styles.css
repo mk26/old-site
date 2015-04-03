@@ -213,7 +213,10 @@ a.title {
   border-radius: 4px;
   border: 1px solid white;
   padding: 3px 6px 3px 6px;
-  margin: -2px; }
+  margin: -2px;
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none; }
 
 .tag-time {
   color: #696969;
@@ -222,8 +225,20 @@ a.title {
 .tag-tech {
   color: white; }
 
+.mk-img, #top-right-logo {
+  float: right;
+  margin-left: 10px;
+  margin-right: 5px;
+  display: block; }
+
+#top-right-logo {
+  margin-top: -33px;
+  margin-right: 8px;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s; }
+
 /* Responsive classes for mobile */
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .header {
     -webkit-animation: rubberBand 0.6s;
     animation: rubberBand 0.6s; }
@@ -263,4 +278,8 @@ a.title {
 
   .mktext, .proj-container {
     font-size: 19px; }
+
+  #top-right-logo {
+    margin-top: -31px;
+    margin-right: 5px; }
  }
