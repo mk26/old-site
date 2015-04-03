@@ -17,8 +17,7 @@
 
 /* HTML elements */
 body {
-  background-color: #fdfdfd;
-  overflow-x: hidden !important; }
+  background-color: #373737; }
 
 ::selection {
   background-color: #384dd8;
@@ -39,14 +38,13 @@ hr {
   text-align: center;
   box-shadow: none;
   border-radius: 1px;
+  background-color: white;
   -webkit-animation: fadeInDown 0.5s;
   animation: fadeInDown 0.5s;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   -webkit-user-select: none;
-  user-select: none;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
+  user-select: none; }
 
 .logo {
   font-family: Nitti Grotesk, sans-serif;
@@ -105,19 +103,17 @@ hr {
   margin-right: 0; }
 
 .mkcontainer {
-  top: 75px;
+  top: 74px;
   position: relative;
   border-radius: 1px;
+  overflow-x: hidden !important;
   -webkit-animation: fadeIn 0.2s;
-  animation: fadeIn 0.2s;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
+  animation: fadeIn 0.2s; }
 
 .contentcontainer, .proj-container, .design-container, .abt-container {
   z-index: 10;
   position: relative;
-  border-radius: 1px;
-  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.4); }
+  border-radius: 1px; }
 
 .pre {
   text-align: center;
@@ -128,8 +124,6 @@ hr {
   line-height: 50vh;
   background-size: cover;
   background-attachment: fixed;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
   -webkit-user-select: none;
   user-select: none; }
 
@@ -137,11 +131,11 @@ hr {
   height: 100vh;
   line-height: 90vh;
   font-family: Pacifico;
-  background-image: url(images/fog.jpg);
-  -webkit-filter: brightness(20%);
-  filter: brightness(20%);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  background-image: url(images/cloud.jpg);
+  /*
+	-webkit-filter: brightness(20%);
+	filter: brightness(20%);
+*/
   -webkit-user-select: none;
   user-select: none; }
 
@@ -169,8 +163,10 @@ hr {
   background-image: url(images/isolatedrain.jpg); }
 
 .proj-container {
-  padding: 10px 32px 32px 32px;
-  background-color: cadetblue; }
+  text-align: center !important;
+  min-height: 75vh;
+  padding: 20px 32px 32px 32px;
+  background-color: black; }
 
 .pre-design {
   background-image: url(images/rain.jpg); }
@@ -184,7 +180,8 @@ hr {
 
 .abt-container {
   padding: 32px;
-  background-color: darkmagenta; }
+  background-color: #42547a;
+  color: #fd70a1; }
 
 /* Custom classes */
 .title, a.title {
@@ -196,14 +193,34 @@ a.title {
   cursor: default;
   text-decoration: none; }
 
-.mktext {
-  font-family: Karla;
-  color: white;
+.proj-title {
+  font-family: Apercu;
+  font-size: 25px;
+  color: white; }
+
+.mktext, .proj-container {
+  font-family: Apercu;
+  color: #f1f1f1;
   font-size: 18px;
   line-height: 1.5em;
   text-align: justify;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in; }
+
+.mktag, .tag-time, .tag-tech {
+  font-family: Apercu;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid white;
+  padding: 3px 6px 3px 6px;
+  margin: -2px; }
+
+.tag-time {
+  color: #696969;
+  background-color: white; }
+
+.tag-tech {
+  color: white; }
 
 /* Responsive classes for mobile */
 @media (max-width: 600px) {
@@ -244,6 +261,6 @@ a.title {
     -webkit-animation: rubberBand 0.2s;
     animation: rubberBand 0.2s; }
 
-  .mktext {
+  .mktext, .proj-container {
     font-size: 19px; }
  }
