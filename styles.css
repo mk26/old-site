@@ -112,8 +112,7 @@ hr {
 
 .contentcontainer, .proj-container, .design-container, .abt-container {
   z-index: 10;
-  position: relative;
-  border-radius: 1px; }
+  position: relative; }
 
 .pre {
   text-align: center;
@@ -127,11 +126,14 @@ hr {
   -webkit-user-select: none;
   user-select: none; }
 
+.pre-hello-container {
+  overflow: hidden; }
+
 .pre-hello {
   height: 100vh;
   line-height: 90vh;
   font-family: Pacifico;
-  background-image: url(images/cloud.jpg);
+  background-image: url(images/bg.jpg);
   /*
 	-webkit-filter: brightness(20%);
 	filter: brightness(20%);
@@ -139,34 +141,46 @@ hr {
   -webkit-user-select: none;
   user-select: none; }
 
-.title-pre {
-  font-size: 75px;
-  text-align: center;
-  text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
-  cursor: default;
-  margin-top: -175px;
-  z-index: 100px;
-  text-decoration: none;
-  color: rgba(240, 240, 240, 0.6);
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite; }
-
-.title-pre:hover {
-  text-shadow: 0px 0px 50px rgba(100, 100, 100, 0.6);
-  color: #f0f0f0; }
-
-.title-pre:active {
-  text-shadow: 0px 0px 50px black;
-  color: rgba(240, 240, 240, 0.2); }
-
 .pre-proj {
   background-image: url(images/isolatedrain.jpg); }
 
 .proj-container {
-  text-align: center !important;
-  min-height: 75vh;
-  padding: 20px 32px 32px 32px;
-  background-color: black; }
+  font-family: Apercu;
+  color: #f1f1f1;
+  font-size: 18px;
+  line-height: 1.5em;
+  text-align: center;
+  min-height: 90vh;
+  padding: 20px 32px 32px 32px; }
+
+.proj-teams {
+  background-color: #332577; }
+
+.proj-tetris {
+  background-color: #287038; }
+
+.proj-shipwars {
+  background-color: #793e38; }
+
+.proj-spark {
+  background-color: #173463; }
+
+.proj-lelivre {
+  text-align: left;
+  background-color: #378475; }
+
+.proj-stockr {
+  text-align: right;
+  background-color: #828282; }
+
+.proj-zones {
+  background-color: #5d2f64; }
+
+.proj-mknet {
+  background-color: #334c72; }
+
+.proj-aflame {
+  background-color: #C62828; }
 
 .pre-design {
   background-image: url(images/rain.jpg); }
@@ -193,12 +207,37 @@ a.title {
   cursor: default;
   text-decoration: none; }
 
+.title-pre {
+  font-size: 75px;
+  text-align: center;
+  text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
+  cursor: default;
+  margin-top: -175px;
+  z-index: 100px;
+  text-decoration: none;
+  color: rgba(240, 240, 240, 0.6);
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+.title-pre:hover {
+  text-shadow: 0px 0px 50px rgba(100, 100, 100, 0.6);
+  color: #f0f0f0; }
+
+.title-pre:active {
+  text-shadow: 0px 0px 50px black;
+  color: rgba(240, 240, 240, 0.2); }
+
 .proj-title {
   font-family: Apercu;
   font-size: 25px;
   color: white; }
 
-.mktext, .proj-container {
+.proj-logo {
+  margin-bottom: 10px;
+  -webkit-filter: drop-shadow(0px 0px 30px #2c2c2c);
+  filter: drop-shadow(0px 0px 30px #2c2c2c); }
+
+.mktext {
   font-family: Apercu;
   color: #f1f1f1;
   font-size: 18px;
@@ -232,10 +271,10 @@ a.title {
   display: block; }
 
 #top-right-logo {
-  margin-top: -33px;
+  margin-top: -35px;
   margin-right: 8px;
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s; }
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s; }
 
 /* Responsive classes for mobile */
 @media only screen and (max-width: 600px) {
@@ -266,17 +305,17 @@ a.title {
     top: 65px; }
 
   .pre-hello {
-    height: 90vh;
-    line-height: 90vh; }
+    height: 90vh; }
 
   .pre {
     font-size: 60px;
     text-shadow: 0px 0px 40px #161616;
     background-attachment: scroll;
+    background-position: 50% 0%;
     -webkit-animation: rubberBand 0.2s;
     animation: rubberBand 0.2s; }
 
-  .mktext, .proj-container {
+  .mktext {
     font-size: 19px; }
 
   #top-right-logo {
