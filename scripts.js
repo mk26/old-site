@@ -4,10 +4,6 @@ function smoothScroll(loc) {
     }, 500);
 }
 
-$('a[href*=#]').click(function () {
-    smoothScroll(this);
-});
-
 $(document).ready(function () {
 	if(typeof window.orientation !== 'undefined') {		
 		$('.pre').css({
@@ -15,11 +11,14 @@ $(document).ready(function () {
 			'background-position': '50% 0%'
 		});
 	}
+    $('#top-right-logo').hide();
+});
+
+window.onload = function() {
 	//Go to section if present in URL
     if (window.location.hash) 
     	smoothScroll(window.location);
-    $('#top-right-logo').hide();
-});
+}
 
 //Scroll events
 window.onscroll = function () {
@@ -101,4 +100,8 @@ window.onscroll = function () {
 //Double click navbar to go to top
 $('.mknav').dblclick(function(){
 	$('html,body').animate({scrollTop: 0}, 300);
+});
+
+$('a[href*=#]').click(function () {
+    smoothScroll(this);
 });
