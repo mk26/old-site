@@ -313,9 +313,7 @@ a.title {
     font-size: 60px;
     text-shadow: 0px 0px 40px #161616;
     background-attachment: scroll;
-    background-position: 50% 0%;
-    -webkit-animation: rubberBand 0.2s;
-    animation: rubberBand 0.2s; }
+    background-position: 50% 0%; }
 
   .mktext {
     font-size: 19px; }
