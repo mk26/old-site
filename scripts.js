@@ -9,6 +9,12 @@ $('a[href*=#]').click(function () {
 });
 
 window.onload = function () {
+	if(typeof window.orientation !== 'undefined') {		
+		$('.pre').css({
+			'background-attachment': 'scroll',
+			'background-position': '50% 0%'
+		});
+	}
 	//Go to section if present in URL
     if (window.location.hash) 
     	smoothScroll(window.location);
