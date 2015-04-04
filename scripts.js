@@ -8,7 +8,7 @@ $('a[href*=#]').click(function () {
     smoothScroll(this);
 });
 
-window.onload = function () {
+$(document).ready(function () {
 	if(typeof window.orientation !== 'undefined') {		
 		$('.pre').css({
 			'background-attachment': 'scroll',
@@ -19,7 +19,7 @@ window.onload = function () {
     if (window.location.hash) 
     	smoothScroll(window.location);
     $('#top-right-logo').hide();
-};
+});
 
 //Scroll events
 window.onscroll = function () {
