@@ -5,16 +5,16 @@ function smoothScroll(loc) {
 }
 
 $(document).ready(function () {
+    $('#top-right-logo').hide();
+});
+
+window.onload = function() {
 	if(typeof window.orientation !== 'undefined') {		
 		$('.pre').css({
 			'background-attachment': 'scroll',
 			'background-position': '50% 0%'
 		});
 	}
-    $('#top-right-logo').hide();
-});
-
-window.onload = function() {
 	//Go to section if present in URL
     if (window.location.hash) 
     	smoothScroll(window.location);
