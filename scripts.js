@@ -48,7 +48,7 @@ window.onscroll = function () {
 	//Initial shadow over main container
 	if (document.body.scrollTop > 0) {	
 		$('.mkcontainer').css({
-            'box-shadow': '2px 0px 30px 10px rgba(100, 100, 100, 0.3)'
+            'box-shadow': '2px 0px 30px 10px rgba(100, 100, 100, 0.2)'
         });
 	}
 	else {

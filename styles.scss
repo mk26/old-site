@@ -168,6 +168,8 @@ hr {
 	line-height: 90vh;
 	font-family: Pacifico;
 	background-image:url(images/bg.jpg);	
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
 /*
 	-webkit-filter: brightness(20%);
 	filter: brightness(20%);
@@ -180,7 +182,7 @@ hr {
 .proj-container {
 	@extend .contentcontainer;
 	font-family: $bodyFont;
-    color: #f1f1f1;
+    color: rgba(255, 255, 255, 0.6);
     font-size: 18px;
     line-height: 1.5em;
 	text-align: center;
@@ -203,11 +205,11 @@ hr {
 }
 .proj-lelivre {
 	text-align: left;
-	background-color: #378475;
+	background-color: #286458;
 }
 .proj-stockr {
 	text-align: right;
-	background-color: #828282;
+	background-color: #625a4c;
 }
 .proj-zones {
 	background-color: #5d2f64;
@@ -272,13 +274,13 @@ a.title {
 }
 .proj-title {
 	font-family: Apercu;
-	font-size: 25px;
+	font-size: 26px;
 	color: white;
 }
 .proj-logo {
 	margin-bottom: 10px;
-	-webkit-filter: drop-shadow(0px 0px 30px #2c2c2c);
-	filter: drop-shadow(0px 0px 30px #2c2c2c);
+	-webkit-filter: drop-shadow(0px 0px 30px rgba(25, 25, 25, 0.32));
+	filter: drop-shadow(0px 0px 30px rgba(25, 25, 25, 0.32));
 }
 .mktext {
     font-family: $bodyFont;
@@ -292,7 +294,7 @@ a.title {
 	font-family: Apercu;
 	font-size: 14px;
 	border-radius: 4px;
-	border: 1px solid white;
+	border: 1px solid rgba(255, 255, 255, 0.5);
 	padding: 3px 6px 3px 6px;
 	margin: -2px;
 	cursor: default;
@@ -300,12 +302,12 @@ a.title {
 }
 .tag-time {
 	@extend .mktag;
-	color: #696969;
-	background-color: white;
+	color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 0.2);
 }
 .tag-tech {
 	@extend .mktag;
-	color: white;
+	color: rgba(255, 255, 255, 0.5);
 }
 .mk-img {
 	float: right;
