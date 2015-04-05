@@ -6,6 +6,9 @@ function smoothScroll(loc) {
 
 $(document).ready(function () {
     $('#top-right-logo').hide();
+    $('[data-toggle="tooltip"]').tooltip({
+	    container: "body"
+    });
 });
 
 window.onload = function() {
@@ -27,7 +30,7 @@ window.onscroll = function () {
 	var level = brightness < 20 ? 20 : brightness;
 	var hello = document.getElementsByClassName("pre-hello")[0];
 	hello.setAttribute("style", '-webkit-filter: brightness('+level+'%)');
-*/
+
 /*
 	var scaleValue = window.pageYOffset/100 < 1 ? 1 : window.pageYOffset/100;
 	scaleValue = scaleValue > 4 ? 4 : scaleValue;
