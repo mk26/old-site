@@ -340,6 +340,10 @@ hr {
 	@include transition(0.2s, ease-in);
 	@include noselect();
 }
+.link-btn.email:hover {
+	background-color: #0f93ff;
+	color: white;
+}
 .link-btn.linkedin:hover {
 	background-color: #2286ba;
 	color: white;
