@@ -92,7 +92,7 @@ hr {
     @include animation(slideInDown, 1s);
 }
 
-.navlinks > a {
+.navlink {
     display: inline-block;
     min-width: 105px;
     padding: 4px;
@@ -103,29 +103,27 @@ hr {
     color: black;
     text-decoration: none;
     cursor: default;
-    @include transition(0.2s, ease-out);
+    @include transition(0.2s, ease);
 }
 
-.navlinks > a.left {
+.navlink.left {
     border-radius: 4px 0px 0px 4px;
 }
 
-.navlinks > a.right {
+.navlink.right {
     border-radius: 0px 4px 4px 0px;
     border-right: 2px solid black;
     margin-right: 10px;
 }
 
-.navlinks > a:hover {
+.navlink:hover {
     color: #ffffff;
     background-color: black;
-    @include transition(0.2s, ease);
 }
 
-.navlinks > a:active {
+.navlink:active {
     color: #9b9b9b;
-    background-color: #353535;
-    @include transition(0.2s, ease-in);
+    background-color: #555555;
 }
 
 /* Containers */
@@ -173,10 +171,6 @@ hr {
 	background-image:url(images/bg.jpg);	
 	-webkit-animation-duration: 0.5s;
 	animation-duration: 0.5s;
-/*
-	-webkit-filter: brightness(20%);
-	filter: brightness(20%);
-*/
 	@include noselect();
 }
 .pre-proj {
@@ -210,7 +204,7 @@ hr {
 	background-color: #286458;
 }
 .proj-stockr {
-	background-color: #625a4c;
+	background-color: #635c4f;
 }
 .proj-zones {
 	background-color: #5d2f64;
@@ -239,13 +233,14 @@ hr {
     background-color: #323d52;
 }
 
-/* Custom classes */
+/* Text classes */
+
 #top-right-logo {
 	float: right;
 	margin-top: -35px;
 	margin-right: 8px;
-	-webkit-animation-duration: 0.3s;
-	animation-duration: 0.3s;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
 }
 .down-arrow {
 	font-size: 75px;
@@ -273,9 +268,6 @@ hr {
 	text-decoration: none;
 	@include transition(0.3s, ease);
 }
-.title:hover {
-	@extend .title;
-}
 .proj-title {
 	font-family: Apercu;
 	font-size: 26px;
@@ -294,6 +286,9 @@ hr {
     text-align: justify;
     @include transition(0.2s, ease-in);
 }
+
+/* Tag boxes */
+
 .mktag {
 	font-family: Apercu;
 	font-size: 14px;
@@ -322,6 +317,9 @@ hr {
 	box-shadow: inset 0px 0px 5px #232323;
 	border-radius: 50px;
 }
+
+/* Link buttons */
+
 .link-btn {
 	float: left;
 	margin: 5px;
@@ -336,13 +334,13 @@ hr {
 	@include transition(0.2s, ease-in);
 	@include noselect();
 }
-.link-btn.email:hover {
-	background-color: #0f93ff;
-	color: white;
-}
 .link-btn.linkedin:hover {
 	background-color: #2286ba;
 	color: white;
+}
+.link-btn.angel:hover {
+	background-color: #ffffff;
+	color: black;
 }
 .link-btn.twitter:hover {
 	background-color: #59adeb;
@@ -356,6 +354,13 @@ hr {
 	background-color: #487597;
 	color: #ffffff;
 }
+.link-btn.email:hover {
+	background-color: #0f93ff;
+	color: white;
+}
+
+/* Photo gallery */
+
 .gallery {
 	display: block;
 	padding: 10px 5px 0px 5px;
@@ -371,7 +376,7 @@ hr {
 	&:hover {
 		-webkit-transform: scale(1.2);
 		transform: scale(1.2);
-		box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.3);
+		box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
 	    border: 3px solid #0b65ff;
 	}
 	&:active {
@@ -390,7 +395,7 @@ hr {
 	font-family: Apercu;
 }
 
-/* Responsive classes for mobile */
+/* Responsive classes for mobile devices */
 
 @media only screen and (max-width: 600px) {
     .header {
@@ -404,22 +409,25 @@ hr {
         margin-top: 2px;
         @include animation(slideInDown, 1s);
     }
-    .navlinks > a {
+    .navlink {
         border-width: 1px;
         padding: 4px 8px 4px 8px;
         font-size: 14px;
         min-width: 50px;
     }
-    .navlinks > a.right {
+    .navlink.right {
         border-width: 1px;
     }
     .mkcontainer {
 	    top: 65px;
     }
     .pre-hello {
-	    height: 90vh;
+	    height: 90vh !important;
+	    line-height: 90vh !important;;
     }
     .pre {
+	    height: 30vh;
+	    line-height: 30vh;
 		font-size: 60px;
 		text-shadow: 0px 0px 40px #161616;
 		background-attachment: scroll;

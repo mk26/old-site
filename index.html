@@ -31,9 +31,9 @@
             <div class="logo animated slideInDown">KARTHIK</div>
             <div class="mknav">
                 <div class="navlinks">
-                    <a class="left" href="#proj">Projects</a>
-<!--                     <a href="#design">Design</a> -->
-                    <a class="right" href="#about">About</a>
+                    <div class="left navlink" data-section="projects">Projects</div>
+<!-- 					<div class="navlink" data-section="design">Design</div> -->
+                    <div class="right navlink" data-section="about">About</div>
                 </div>
             </div>
             <img id="top-right-logo" class="animated img-rounded" src="images/mk.png" width="34" height="34">
@@ -45,11 +45,11 @@
                     <p class="title">hi!</p>
                 </div>
                 <div class="down-arrow animated pulse">
-                    <a href="#proj" class="down-arrow"><span class="glyphicon glyphicon-chevron-down"></span></a>
+                    <div class="down-arrow" data-section="projects"><span class="glyphicon glyphicon-chevron-down"></span></div>
                 </div>
             </div>
-            <div class="wow fadeInUp pre pre-proj" data-wow-duration="0.5s">
-                <a name="proj" class="title">PROJECTS</a>
+            <div id="projects" class="wow fadeInUp pre pre-proj" data-wow-duration="0.5s">
+                <div class="title">PROJECTS</div>
             </div>
 
             <div class="wow fadeInUp proj-container proj-teams row">
@@ -292,6 +292,23 @@
                     <span class="tag-tech">iOS</span>
                     <span class="tag-tech">Objective - C</span>
                 </div>
+                <div class="gallery wow zoomIn">
+                    <figure>
+                        <a href="images/proj/gallery/zones/zones-add.png" data-size="993x1766"><img src="images/proj/gallery/zones/zones-add_thumb.jpg">
+                        </a>
+                        <figcaption>zones-add</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="images/proj/gallery/zones/zones-list.png" data-size="993x1766"><img src="images/proj/gallery/zones/zones-list_thumb.jpg">
+                        </a>
+                        <figcaption>zones-list</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="images/proj/gallery/zones/zones-map.png" data-size="993x1766"><img src="images/proj/gallery/zones/zones-map_thumb.jpg">
+                        </a>
+                        <figcaption>zones-map</figcaption>
+                    </figure>
+                </div>
             </div>
             <div class="wow fadeInUp proj-container proj-mknet row">
                 <img class="wow zoomIn proj-logo" src="images/proj/logos/mknet.png" width="200">
@@ -310,8 +327,8 @@
             </div>
 
 <!--
-            <div class="wow fadeInUp pre pre-design" data-wow-duration="0.5s">
-                <a name="design" class="title">DESIGN</a>
+            <div id="design" class="wow fadeInUp pre pre-design" data-wow-duration="0.5s">
+                <div class="title">DESIGN</div>
             </div>
             <div class="wow fadeInUp design-container">
                 <div class="mktext">
@@ -320,8 +337,8 @@
             </div>
 -->
 
-            <div class="wow fadeInUp pre pre-abt" data-wow-duration="0.5s">
-                <a name="about" class="title">ABOUT</a>
+            <div id="about" class="wow fadeInUp pre pre-abt" data-wow-duration="0.5s">
+                <div class="title">ABOUT</div>
             </div>
             <div class="wow fadeInUp abt-container">
                 <div class="row mktext">
@@ -329,13 +346,16 @@
 
                     <strong>EDUCATION</strong>
                     <ul>
-                        <li>Santa Clara University [Mar 2015]</li>
-                        <li>Anna University [2013]</li>
+                        <li>Santa Clara University <span class="tag-time">Mar 2015</span>
+</li>
+                        <li>Anna University <span class="tag-time">2013</span>
+</li>
                     </ul>
 
                     <strong>LINKS</strong>
                     <div class="col-sm-12">
                         <a href="https://linkedin.com/in/karthik101" class="link-btn linkedin" data-toggle="tooltip" data-placement="top" title="LinkedIn"><span class="fa fa-linkedin-square"></span></a>
+						<a href="https://angel.co/karthik-muthusamy" class="link-btn angel" data-toggle="tooltip" data-placement="top" title="AngelList"><span class="fa fa-angellist"></span></a>
                         <a href="https://twitter.com/mk26s" class="link-btn twitter" data-toggle="tooltip" data-placement="top" title="Twitter - @mk26s"><span class="fa fa-twitter"></span></a>
                         <a href="https://github.com/mk26" data-toggle="tooltip" data-placement="top" title="Github" class="link-btn github"><span class="fa fa-github"></span></a>
                         <a href="https://instagram.com/mk26s" data-toggle="tooltip" data-placement="top" title="Instagram - mk26s" class="link-btn instagram"><span class="fa fa-instagram"></span></a>
