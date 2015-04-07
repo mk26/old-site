@@ -116,7 +116,7 @@ hr {
     margin-right: 10px;
 }
 
-.navlink:hover {
+.navlink:hover, .navlink.active {
     color: #ffffff;
     background-color: black;
 }
