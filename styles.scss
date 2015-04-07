@@ -189,7 +189,7 @@ hr {
     font-size: 18px;
     line-height: 1.5em;
 	text-align: center;
-	min-height: 90vh;
+	height: auto;
     padding: 20px $contentPad $contentPad $contentPad;
 }
 
@@ -207,11 +207,9 @@ hr {
 	background-color: #173463;
 }
 .proj-lelivre {
-	text-align: left;
 	background-color: #286458;
 }
 .proj-stockr {
-	text-align: right;
 	background-color: #625a4c;
 }
 .proj-zones {
@@ -359,32 +357,34 @@ hr {
 	color: #ffffff;
 }
 .gallery {
-padding: 10px 0px 10px 5px;
-  width: 100%;
+	display: block;
+	padding: 10px 5px 0px 5px;
+	width: 100%;
 }
 .gallery img {
 	width: auto;
-	height: 96px;
+	max-height: 96px;
 	border-radius: 4px;
-	@include transition(0.2s,ease);
+	@include transition(0.3s,ease);
 	cursor: -webkit-zoom-in;
-}
-.gallery img:hover {
-	-webkit-transform: scale(1.2);
-	transform: scale(1.2);
-	box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
-    border: 3px solid #0b65ff;
-}
-.gallery img:active {
-	-webkit-filter: brightness(80%);
+	cursor: -moz-zoom-in;
+	&:hover {
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+		box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.3);
+	    border: 3px solid #0b65ff;
+	}
+	&:active {
+		-webkit-filter: brightness(70%);
+		filter: brightness(70%);
+	}
 }
 .gallery figure {
-  display: block;
-  float: left;
-  margin: 5px 5px 0px 0px;
+	display: inline-block;
+	margin: 10px 1px 0px 0px;
 }
 .gallery figcaption {
-  display: none;
+	display: none;
 }
 .pswp__caption {
 	font-family: Apercu;
