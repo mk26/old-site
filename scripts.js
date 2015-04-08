@@ -9,7 +9,7 @@ window.onload = function () {
     if (typeof window.orientation !== 'undefined') {
         $('.pre').css({
             'background-attachment': 'scroll',
-            'background-position': '50% 0%'
+            'background-position': '50% 25%'
         });
     }
 }

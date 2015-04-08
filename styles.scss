@@ -1,7 +1,10 @@
 /* Variables */
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
 @import url(http://fonts.googleapis.com/css?family=Pacifico&text=hi!);
 
-$bodyFont: Apercu;
+$mainFont: Apercu, Inconsolata, monospace;
+$preFont: Nitti Grotesk Bold, sans-serif;
+$preFontLight: Nitti Grotesk, sans-serif;
 $contentPad: 32px;
 
 /* Mixins */
@@ -74,7 +77,7 @@ hr {
 }
 
 .logo {
-    font-family: Nitti Grotesk, sans-serif;
+    font-family: $preFontLight;
     font-size: 20px;
     letter-spacing: 2px;
     text-align: center;
@@ -87,7 +90,7 @@ hr {
 .navlinks {
     display: inline-block;
     margin-top: 3px;
-    font-family: Apercu, sans-serif;
+    font-family: $mainFont;
     font-size: 16px;
     @include animation(slideInDown, 1s);
 }
@@ -104,28 +107,26 @@ hr {
     text-decoration: none;
     cursor: default;
     @include transition(0.2s, ease);
+	&.left {
+	    border-radius: 4px 0px 0px 4px;
+	}
+	
+	&.right {
+	    border-radius: 0px 4px 4px 0px;
+	    border-right: 2px solid black;
+	    margin-right: 10px;
+	}
+	
+	&:hover, &.active {
+	    color: #ffffff;
+	    background-color: black;
+	}
+	
+	&:active {
+	    color: #9b9b9b;
+	    background-color: #373737;
+	}
 }
-
-.navlink.left {
-    border-radius: 4px 0px 0px 4px;
-}
-
-.navlink.right {
-    border-radius: 0px 4px 4px 0px;
-    border-right: 2px solid black;
-    margin-right: 10px;
-}
-
-.navlink:hover, .navlink.active {
-    color: #ffffff;
-    background-color: black;
-}
-
-.navlink:active {
-    color: #9b9b9b;
-    background-color: #555555;
-}
-
 /* Containers */
 
 .container-fluid {
@@ -151,7 +152,7 @@ hr {
 }
 .pre {
 	text-align: center;
-	font-family: Nitti Grotesk Bold, sans-serif;
+	font-family: $preFont;
 	font-size: 100px;
 	text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.8);
 	height: 50vh;
@@ -168,17 +169,31 @@ hr {
 	height: 100vh;
 	line-height: 90vh;
 	font-family: Pacifico;
-	background-image:url(images/bg.jpg);	
+	background-image:url(images/pre-hello-bg.jpg);	
 	-webkit-animation-duration: 0.5s;
 	animation-duration: 0.5s;
 	@include noselect();
 }
 .pre-proj {
-	background-image:url(images/proj-banner.jpg);	
+	background-image:url(images/pre-proj-bg.jpg);	
+}
+.pre-proj-personal {
+	height: auto;
+	background-color: #e86316;
+	color: rgba(255, 255, 255, 0.8);
+	//box-shadow:  0px 1px 20px 10px rgba(0, 0, 0, 0.1);
+	font-size: 22px;
+	z-index: 100;
+	position: relative;
+	text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.8);
+	font-family: $preFontLight;
+	text-align: center;
+	padding: 7px;
+	@include noselect();
 }
 .proj-container {
 	@extend .contentcontainer;
-	font-family: $bodyFont;
+	font-family: $mainFont;
     color: rgba(255, 255, 255, 0.6);
     font-size: 18px;
     line-height: 1.5em;
@@ -192,19 +207,19 @@ hr {
 	background-color: #332577;
 }
 .proj-tetris {
-	background-color: #287038;
+	background-color: #29714b;
 }
 .proj-shipwars {
-	background-color: #793e38;
+	background-color: #873b33;
 }
 .proj-spark {
-	background-color: #173463;
+	background-color: #243b5e;
 }
 .proj-lelivre {
 	background-color: #286458;
 }
 .proj-stockr {
-	background-color: #635c4f;
+	background-color: #7d7d7d;
 }
 .proj-zones {
 	background-color: #5d2f64;
@@ -213,7 +228,20 @@ hr {
 	background-color: #334c72;
 }
 .proj-aflame {
-	background-color: #C62828;
+	background-color: #dcdcdc;
+	color: rgba(0, 0, 0, 0.6);
+	.proj-title {
+		color: rgba(0, 0, 0, 0.8);
+	}
+	.tag-tech {
+		border-color: rgba(0, 0, 0, 0.6);
+		color: rgba(0, 0, 0, 0.6);
+	}
+	.tag-time {
+		border-color: rgba(0, 0, 0, 0.6);
+		color: rgba(0, 0, 0, 0.6);
+		background-color: rgba(0, 0, 0, 0.1);
+	}
 }
 
 .pre-design {
@@ -225,7 +253,7 @@ hr {
     background-color: steelblue;
 }
 .pre-abt {
-	background-image:url(images/meteor.jpg);	
+	background-image:url(images/pre-abt-bg.jpg);	
 }
 .abt-container {
 	@extend .contentcontainer;
@@ -269,7 +297,7 @@ hr {
 	@include transition(0.3s, ease);
 }
 .proj-title {
-	font-family: Apercu;
+	font-family: $mainFont;
 	font-size: 26px;
 	color: white;
 }
@@ -279,7 +307,7 @@ hr {
 	filter: drop-shadow(0px 0px 30px rgba(25, 25, 25, 0.32));
 }
 .mktext {
-    font-family: $bodyFont;
+    font-family: $mainFont;
     color: rgba(255, 255, 255, 0.6);
     font-size: 18px;
     line-height: 1.5em;
@@ -290,7 +318,7 @@ hr {
 /* Tag boxes */
 
 .mktag {
-	font-family: Apercu;
+	font-family: $mainFont;
 	font-size: 14px;
 	border-radius: 4px;
 	border: 1px solid rgba(255, 255, 255, 0.5);
@@ -306,6 +334,19 @@ hr {
 .tag-tech {
 	@extend .mktag;
 	color: rgba(255, 255, 255, 0.5);
+}
+.tag-soon {
+	@extend .mktag;
+	font-size: 18px;
+	line-height: 1.1em;
+	font-family: $preFontLight;
+	margin: 12px;
+	display: inline-block;
+	padding: 10px;
+	color: rgba(255, 255, 255, 0.7);
+	& span {
+		font-size: 15px;
+	}
 }
 .mkimg {
 	float: right;
@@ -392,7 +433,7 @@ hr {
 	display: none;
 }
 .pswp__caption {
-	font-family: Apercu;
+	font-family: $mainFont;
 }
 
 /* Responsive classes for mobile devices */
@@ -414,9 +455,9 @@ hr {
         padding: 4px 8px 4px 8px;
         font-size: 14px;
         min-width: 50px;
-    }
-    .navlink.right {
-        border-width: 1px;
+   	    &.right {
+	        border-width: 1px;
+	    }
     }
     .mkcontainer {
 	    top: 65px;
@@ -426,8 +467,8 @@ hr {
 	    line-height: 90vh !important;;
     }
     .pre {
-	    height: 30vh;
-	    line-height: 30vh;
+	    height: 35vh;
+	    line-height: 35vh;
 		font-size: 60px;
 		text-shadow: 0px 0px 40px #161616;
 		background-attachment: scroll;
