@@ -49,7 +49,7 @@ window.onscroll = function () {
         $('.header').css({
             'margin-top': '-20px',
             'z-index': '1000',
-            'background-color': 'rgba(255, 255, 255, 0.9)',
+            'background-color': 'rgba(255, 255, 255, 0.95)',
             'box-shadow': '0px 0px 15px 10px rgba(100, 100, 100, 0.2)'
         });
         $('.logo').addClass("fadeOutUp");
@@ -69,7 +69,7 @@ window.onscroll = function () {
         $('.header').css({
             'margin-top': '-20px',
             'z-index': '1000',
-            'background-color': 'rgba(255, 255, 120, 0.9)',
+            'background-color': 'rgba(255, 255, 120, 0.95)',
             'box-shadow': '0px 0px 15px 10px rgba(100, 100, 100, 0.2)'
         });
         $('#top-right-logo').addClass("rotateInDownRight");

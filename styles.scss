@@ -75,18 +75,12 @@ hr {
 	@include noselect();
 	
 }
-
 .logo {
     font-family: $preFontLight;
     font-size: 20px;
     letter-spacing: 2px;
     text-align: center;
 }
-
-.logo-rounded {
-	border-radius: 25px;
-}
-
 .navlinks {
     display: inline-block;
     margin-top: 3px;
@@ -94,7 +88,6 @@ hr {
     font-size: 16px;
     @include animation(slideInDown, 1s);
 }
-
 .navlink {
     display: inline-block;
     min-width: 105px;
@@ -127,6 +120,14 @@ hr {
 	    background-color: #373737;
 	}
 }
+#top-right-logo {
+	float: right;
+	margin-top: -35px;
+	margin-right: 8px;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+}
+
 /* Containers */
 
 .container-fluid {
@@ -201,7 +202,9 @@ hr {
 	height: auto;
     padding: 20px $contentPad $contentPad $contentPad;
 }
-
+.logo-rounded {
+	border-radius: 25px;
+}
 //Individual Projects
 .proj-teams {
 	background-color: #332577;
@@ -243,7 +246,6 @@ hr {
 		background-color: rgba(0, 0, 0, 0.1);
 	}
 }
-
 .pre-design {
 	background-image:url(images/rain.jpg);	
 }
@@ -260,16 +262,19 @@ hr {
     padding: $contentPad;
     background-color: #323d52;
 }
+.mkimg {
+	float: right;
+	margin-left: 7px;
+	background-image: url(images/mk.jpg);
+	background-size: cover;
+	width: 100px;
+	height: 100px;
+	box-shadow: inset 0px 0px 5px #232323;
+	border-radius: 50px;
+}
 
 /* Text classes */
 
-#top-right-logo {
-	float: right;
-	margin-top: -35px;
-	margin-right: 8px;
-	-webkit-animation-duration: 0.5s;
-	animation-duration: 0.5s;
-}
 .down-arrow {
 	font-size: 75px;
 	text-align: center;
@@ -347,16 +352,6 @@ hr {
 	& span {
 		font-size: 15px;
 	}
-}
-.mkimg {
-	float: right;
-	margin-left: 7px;
-	background-image: url(images/mk.jpg);
-	background-size: cover;
-	width: 100px;
-	height: 100px;
-	box-shadow: inset 0px 0px 5px #232323;
-	border-radius: 50px;
 }
 
 /* Link buttons */
