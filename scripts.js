@@ -1,44 +1,51 @@
+var parallax = [];
+
 $(document).ready(function () {
     $('#top-right-logo').hide();
     $('[data-toggle="tooltip"]').tooltip({
         container: "body"
     });
+	parallax = [].slice.call(document.getElementsByClassName("pre"));
+	if (typeof window.orientation !== 'undefined') {
+		parallax.forEach(function (e, i) {
+			e.style.backgroundAttachment = 'scroll';
+            e.style.backgroundPosition = '50% 25%';
+        });
+    }
 });
 
+/*
 window.onload = function () {
     if (typeof window.orientation !== 'undefined') {
-        $('.pre').css({
-            'background-attachment': 'scroll',
-            'background-position': '50% 25%'
+		parallax.forEach(function (e, i) {
+			e.style.backgroundAttachment = 'scroll';
+            e.style.backgroundPosition = '50% 25%';
         });
     }
 }
+*/
 
 //Scroll events
 window.onscroll = function () {
     //Disable parallax for Mobile devices
     if (typeof window.orientation == 'undefined') {
-        var parallax = document.querySelectorAll(".pre");
-  [].slice.call(parallax).forEach(function (el, i) {
-            var bgPosition = "50% " + (window.pageYOffset / -2) + "px";
-            el.style.backgroundPosition = bgPosition;
+		parallax.forEach(function (e, i) {
+            var pos = "50% " + (window.pageYOffset / -2) + "px";
+            e.style.backgroundPosition = pos;
         });
     } else {
-        $('.pre').css({
-            'background-attachment': 'scroll',
-            'background-position': '50% 25%'
+		parallax.forEach(function (e, i) {
+			e.style.backgroundAttachment = 'scroll';
+            e.style.backgroundPosition = '50% 25%';
         });
     }
 
     //Initial shadow over main container
     if (document.body.scrollTop > 0) {
-        $('.mkcontainer').css({
-            'box-shadow': '2px 0px 30px 10px rgba(100, 100, 100, 0.2)'
-        });
-    } else {
-        $('.mkcontainer').css({
-            'box-shadow': 'none'
-        });
+		document.getElementsByClassName('mkcontainer')[0].style.boxShadow = '2px 0px 30px 10px rgba(100, 100, 100, 0.2)';
+    } 
+    else {
+	    document.getElementsByClassName('mkcontainer')[0].style.boxShadow = 'none';
     }
 
     //Navbar adjustments
@@ -281,5 +288,4 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
     }
 };
 
-// execute above function
 initPhotoSwipeFromDOM('.gallery');
