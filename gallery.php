@@ -1,5 +1,5 @@
 <?php 
-$directory = "images/proj/gallery/aflame";
+$directory = "images/proj/gallery/zones";
 foreach(array_reverse(glob($directory."*", GLOB_ONLYDIR)) as $subdir) {
     $images = glob($subdir."/*.png");
     echo "<h3 class=\"text-info\">".basename($subdir)."</h3>";

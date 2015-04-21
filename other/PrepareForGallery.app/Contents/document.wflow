@@ -180,7 +180,7 @@
 				<key>Class Name</key>
 				<string>AMScaleImagesAction</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>InputUUID</key>
 				<string>ED8559AB-90A0-4E8B-B4B7-13049E64E9F3</string>
 				<key>Keywords</key>
@@ -253,17 +253,15 @@
 						<string>3</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
-				<true/>
+				<false/>
 				<key>location</key>
-				<string>349.500000:275.000000</string>
+				<string>349.500000:212.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Scale Images.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>action</key>
@@ -395,7 +393,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>349.500000:513.000000</string>
+				<string>349.500000:450.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Create Thumbnail Images.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -405,14 +403,14 @@
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>1C02BEC7-EAC9-4056-A0FC-53408601FBA6</key>
+		<key>6C5BCE55-A092-49AC-AAE6-7EFEA9850064</key>
 		<dict>
 			<key>from</key>
 			<string>B80B6FAB-3E4C-4999-BE2F-014667F5C7F5 - B80B6FAB-3E4C-4999-BE2F-014667F5C7F5</string>
 			<key>to</key>
 			<string>689A87C8-46E2-4DB1-AB38-F5E72722CBDF - 689A87C8-46E2-4DB1-AB38-F5E72722CBDF</string>
 		</dict>
-		<key>FBE24D5C-0A7B-46FC-8347-31E74B727F10</key>
+		<key>9225D265-8168-4D12-8920-12D0CC536155</key>
 		<dict>
 			<key>from</key>
 			<string>D2D622A4-27BD-4508-B7B5-C07EEFF77310 - D2D622A4-27BD-4508-B7B5-C07EEFF77310</string>
