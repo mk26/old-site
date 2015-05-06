@@ -24,6 +24,16 @@ $contentPad: 32px;
     user-select: none;
 }
 
+%clearfix {
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 /* Fonts */
 
 @font-face {
@@ -191,6 +201,7 @@ hr {
 	@include noselect();
 }
 .proj-container {
+	@extend %clearfix;
 	@extend .contentcontainer;
 	font-family: $mainFont;
     color: rgba(255, 255, 255, 0.6);
