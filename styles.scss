@@ -369,17 +369,21 @@ hr {
 	background-color: #ffffff;
 	color: black;
 }
-.link-btn.twitter:hover {
-	background-color: #59adeb;
-	color: white;
-}
 .link-btn.github:hover {
 	background-color: white;
 	color: #2f2f2f;
 }
+.link-btn.twitter:hover {
+	background-color: #59adeb;
+	color: white;
+}
 .link-btn.instagram:hover {
 	background-color: #487597;
 	color: #ffffff;
+}
+.link-btn.resume:hover {
+	background-color: #4cc398;
+	color: white;
 }
 .link-btn.email:hover {
 	background-color: #0f93ff;
