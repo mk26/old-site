@@ -1,0 +1,18 @@
+<body>
+	<div id="flashbox"></div>
+	<script>
+		var box = document.getElementById("flashbox");
+		var data = ["Text1","Text2"];
+		function flash(box, data) {
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+			setInterval(function() {
+				box.innerHTML = data[getRandomInt(0,data.length)];
+			},1000);
+		}
+		flash(box, data)
+		
+		var Flasher = Flasher || {};
+	</script>
+</body>
