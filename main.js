@@ -4,6 +4,12 @@ var MK = {
 		var self = this;
 	    $('#top-right-logo').hide();
 	    
+	    window.sr = ScrollReveal();
+		sr.reveal('.reveal', {reset:true});
+		sr.reveal('.revealUp', {origin:"bottom", duration:500, scale:0.3, reset:true});
+		sr.reveal('.revealZoom', {scale:0.1, delay:150, reset:true, opacity:0.1, rotate: { x: 0, y: 100, z: 0 }});
+
+		
 	    //Initialize tooltips
 	    $('[data-toggle="tooltip"]').tooltip({
 	        container: "body"
